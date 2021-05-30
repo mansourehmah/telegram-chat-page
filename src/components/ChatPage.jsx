@@ -1,11 +1,13 @@
-import { useSelector } from 'react-redux'
+
 
 
 function App() {
-    const open = useSelector(state => state.chatPage.open)
+    // const open = useSelector(state => state.chatPage.open)
 
     return (
-        <h1>chatpage {open}</h1>
+        <div className="chatPage col-9">
+
+        </div>
     );
 }
 

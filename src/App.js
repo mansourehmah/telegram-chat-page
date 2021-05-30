@@ -7,9 +7,8 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div className="App">
-        hello
-        <ChatPage></ChatPage>
+      <div className="main">
+        <ChatPage />
       </div>
     </Provider>
   );

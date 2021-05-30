@@ -5,3 +5,18 @@
     box-sizing: border-box;
     font-family: "Noto Sans", sans-serif;
 }
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    .chatPage {
+        border: 2px solid rgb(36, 36, 102);
+        height: 90vh;
+        background-image: url(../img/bg.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
