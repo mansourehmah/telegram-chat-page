@@ -23,6 +23,12 @@
         .massageWrapper {
             height: 100%;
             border: 1px solid red;
+            .msg-me {
+                background-color: blue;
+            }
+            .msg-user {
+                background-color: rgb(113, 113, 230);
+            }
         }
         .inputMassage {
             background-color: wheat;
