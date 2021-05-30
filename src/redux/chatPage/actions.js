@@ -1,8 +1,14 @@
-import { PROFILE_DETAILS } from './types'
+import { PROFILE_DETAILS, ADD_MASSAGE } from './types'
 
-export const PROFILEdETAILS = (open) => {
+export const profileDetails = (open) => {
     return {
         type: PROFILE_DETAILS,
         open
+    }
+}
+export const addMasaage = (newMsg) => {
+    return {
+        type: ADD_MASSAGE,
+        newMsg
     }
 }
