@@ -20,5 +20,13 @@
             background-color: #2e3b44;
             cursor: pointer;
         }
+        .massageWrapper {
+            height: 100%;
+            border: 1px solid red;
+        }
+        .inputMassage {
+            background-color: wheat;
+            min-height: 40px;
+        }
     }
 }
