@@ -1,9 +1,6 @@
-
-
-
-function App() {
+function chatPage() {
+    
     // const open = useSelector(state => state.chatPage.open)
-
     return (
         <div className="chatPage col-9">
 
@@ -11,4 +8,4 @@ function App() {
     );
 }
 
-export default App;
+export default chatPage;
