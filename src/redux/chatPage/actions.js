@@ -1,4 +1,4 @@
-import { PROFILE_DETAILS, ADD_MASSAGE } from './types'
+import { PROFILE_DETAILS, ADD_MESSAGE } from './types'
 
 export const profileDetails = (open) => {
     return {
@@ -6,9 +6,9 @@ export const profileDetails = (open) => {
         open
     }
 }
-export const addMasaage = (newMsg) => {
+export const addMessage = (newMsg) => {
     return {
-        type: ADD_MASSAGE,
+        type: ADD_MESSAGE,
         newMsg
     }
 }

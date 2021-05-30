@@ -20,9 +20,13 @@
             background-color: #2e3b44;
             cursor: pointer;
         }
-        .massageWrapper {
+        .messageWrapper {
             height: 100%;
             border: 1px solid red;
+            .msg {
+                min-height: 32px;
+                border-radius: 10px;
+            }
             .msg-me {
                 background-color: blue;
             }
@@ -30,7 +34,7 @@
                 background-color: rgb(113, 113, 230);
             }
         }
-        .inputMassage {
+        .inputMessage {
             background-color: wheat;
             min-height: 40px;
         }

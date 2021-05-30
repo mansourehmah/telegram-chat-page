@@ -1,17 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { addMasaage } from '../redux/chatPage/actions'
+import { addMessage} from '../redux/chatPage/actions'
 
-function InputMassage() {
+function InputMessage() {
     const dispatch = useDispatch()
 
-    const [newMasaage, setNewMasaage] = useState(null)
+    const [newMessage, setNewMessage] = useState(null)
 
     const inputRef = useRef()
     const buttonRef = useRef()
 
-    const setMassage = () => {
-        setNewMasaage(inputRef.current.value)
+    const setMessage = () => {
+        setNewMessage(inputRef.current.value)
         if (inputRef.current.value.length > 0) {
             buttonRef.current.disabled = false
         }
@@ -20,9 +20,9 @@ function InputMassage() {
         }
     }
 
-    const sendMasaage = () => {
+    const sendMessage = () => {
         setTimeout(() => {
-            dispatch(addMasaage(newMasaage))
+            dispatch(addMessage(newMessage))
         }, 2000)
         inputRef.current.value = null
         buttonRef.current.disabled = true
@@ -32,11 +32,11 @@ function InputMassage() {
     }, [])
 
     return (
-        <div className="inputMassage">
-            <input type="text" ref={inputRef} onChange={() => { setMassage() }} />
-            <button onClick={() => { sendMasaage() }} ref={buttonRef}>click</button>
+        <div className="inputMessage">
+            <input type="text" ref={inputRef} onChange={() => { setMessage() }} />
+            <button onClick={() => { sendMessage() }} ref={buttonRef}>click</button>
         </div>
     );
 }
 
-export default InputMassage;
+export default InputMessage;

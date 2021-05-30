@@ -1,4 +1,4 @@
-import { PROFILE_DETAILS, ADD_MASSAGE } from './types'
+import { PROFILE_DETAILS, ADD_MESSAGE } from './types'
 
 const initialState = {
     data: [
@@ -70,16 +70,16 @@ const chatPageReducer = (state = initialState, action) => {
                 open: !state.open
             }
         }
-        case ADD_MASSAGE: {
+        case ADD_MESSAGE: {
 
-            const newMasaage = {
+            const newMessage = {
                 id: state.data.length + 1,
                 user: 'me',
                 msg: action.newMsg
             }
             return {
                 ...state,
-                data: [...state.data, newMasaage]
+                data: [...state.data, newMessage]
             }
         }
         default: return state

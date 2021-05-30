@@ -1,2 +1,2 @@
 export const PROFILE_DETAILS = 'PROFILE_DETAILS'
-export const ADD_MASSAGE = 'ADD_MASSAGE'
+export const ADD_MESSAGE = 'ADD_MESSAGE'
