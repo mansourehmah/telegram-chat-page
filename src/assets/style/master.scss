@@ -8,9 +8,6 @@
 .main {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: gray;
     .chatPage {
         border: 2px solid rgb(36, 78, 102);
@@ -18,5 +15,10 @@
         background-image: url(../img/bg.png);
         background-size: cover;
         background-position: center;
+        .header {
+            min-height: 70px;
+            background-color: #2e3b44;
+            cursor: pointer;
+        }
     }
 }

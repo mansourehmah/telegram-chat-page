@@ -7,7 +7,7 @@ function App() {
 
   return (
     <Provider store={store}>
-      <div className="main">
+      <div className="main d-flex justify-content-center align-items-center">
         <ChatPage />
       </div>
     </Provider>
