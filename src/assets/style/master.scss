@@ -14,6 +14,7 @@
     }
     .chatPage {
         border: 2px solid rgb(36, 78, 102);
+        background-color: #212a30;
         height: 90vh;
         justify-content: space-between;
         overflow: hidden;
@@ -68,6 +69,26 @@
                 left: 0;
                 transition: 0.4s;
                 background-color: #212a30;
+                .back {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 15px;
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        span {
+                            transition: 0.4s;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                        &:hover {
+                            span {
+                                color: white;
+                            }
+                        }
+                    }
+                }
             }
             .profileDetails.open {
                 height: calc(90vh - 60px);

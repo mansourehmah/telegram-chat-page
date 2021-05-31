@@ -1,4 +1,5 @@
 import Info from "./Info";
+import Back from "./Back";
 
 function ProfileDetails(props) {
 
@@ -16,6 +17,7 @@ function ProfileDetails(props) {
                     })}
                 </div>
             </div>
+            <Back />
         </div>
     );
 }

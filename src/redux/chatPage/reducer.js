@@ -84,7 +84,6 @@ const chatPageReducer = (state = initialState, action) => {
             }
         }
         case ADD_MESSAGE: {
-
             const newMessage = {
                 id: state.data.length + 1,
                 user: 'me',
