@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux'
 import Message from './Message';
+import Loading from "./Loading";
 
 function MessageWrapper() {
     const message = useSelector(state => state.chatPage.data)
+    const loading = useSelector(state => state.chatPage.loading)
     const msgWrapperRef = useRef()
 
     useEffect(() => {
@@ -12,6 +14,7 @@ function MessageWrapper() {
 
     return (
         <div className='messageWrapper p-0' ref={msgWrapperRef}>
+            {loading ? <Loading /> : ''}
             <div className="messageBox py-2 px-1">
                 {message.map((message) => {
                     return (
