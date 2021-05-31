@@ -16,7 +16,7 @@ function MessageWrapper() {
                 {message.map((message) => {
                     return (
                         <div key={message.id + '-message'} className={message.user === 'me' ? 'd-flex msg-me' : 'd-flex msg-user'}>
-                            <Message msg={message.msg} user={message.user} />
+                            <Message msg={message.msg} user={message.user} time={message.time} />
                         </div>
                     )
                 })}

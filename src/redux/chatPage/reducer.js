@@ -7,56 +7,67 @@ const initialState = {
             id: 1,
             user: 'me',
             msg: 'hi',
+            time: '12:30'
         },
         {
             id: 2,
             user: 'sampleUser',
-            msg: 'hi !'
+            msg: 'hi !',
+            time: '12:30'
         },
         {
             id: 3,
             user: 'me',
-            msg: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, molestiae!'
+            msg: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, molestiae!',
+            time: '12:40'
         },
         {
             id: 4,
             user: 'sampleUser',
-            msg: 'Lorem ipsum dolor sit amet consectetur'
+            msg: 'Lorem ipsum dolor sit amet consectetur',
+            time: '13:45'
         },
         {
             id: 5,
             user: 'me',
-            msg: ':)))'
+            msg: ':)))',
+            time: '15:01'
         },
         {
             id: 6,
             user: 'me',
-            msg: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore'
+            msg: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore',
+            time: '17:33'
         },
         {
             id: 7,
             user: 'sampleUser',
-            msg: 'Lorem ipsum dolor sit amet'
+            msg: 'Lorem ipsum dolor sit amet',
+            time: '18:00'
         },
         {
             id: 8,
             user: 'sampleUser',
-            msg: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, molestiae!'
+            msg: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, molestiae!',
+            time: '18:30'
         },
         {
             id: 9,
             user: 'sampleUser',
-            msg: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.'
+            msg: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+            time: '18:30'
         },
         {
             id: 10,
             user: 'me',
-            msg: 'Lorem ipsum dolor.'
+            msg: 'Lorem ipsum dolor.',
+            time: '19:21'
         },
         {
             id: 11,
             user: 'sampleUser',
-            msg: 'Lorem ipsum dolor sit.'
+            msg: 'Lorem ipsum dolor sit.',
+            time: '17:31'
         }
     ],
     user: {
@@ -84,10 +95,12 @@ const chatPageReducer = (state = initialState, action) => {
             }
         }
         case ADD_MESSAGE: {
+            const time = new Date
             const newMessage = {
                 id: state.data.length + 1,
                 user: 'me',
-                msg: action.newMsg
+                msg: action.newMsg,
+                time: time.getHours() + ':' + time.getMinutes()
             }
             return {
                 ...state,
