@@ -10,13 +10,13 @@
     height: 100vh;
     background-color: gray;
     .chatPageWrapper {
-        overflow: hidden;
         position: relative;
     }
     .chatPage {
         border: 2px solid rgb(36, 78, 102);
         height: 90vh;
         justify-content: space-between;
+        overflow: hidden;
         @include not-md {
             height: 100%;
         }
@@ -70,6 +70,7 @@
         }
         .messageWrapper {
             overflow-y: auto;
+            margin: 2px 0;
             .msg {
                 min-height: 32px;
                 border-radius: 10px;
