@@ -5,9 +5,11 @@ import MessageWrapper from "./MessageWrapper";
 function chatPage() {
 
     return (
-        <div className="chatPage col-9 p-0 d-flex justify-content-center flex-column">
-            <Header />
-            <MessageWrapper />
+        <div className="chatPage col-12 col-md-9 p-0 d-flex flex-column">
+            <div className="topWraper d-flex flex-column">
+                <Header />
+                <MessageWrapper />
+            </div>
             <InputMessage />
         </div>
     );

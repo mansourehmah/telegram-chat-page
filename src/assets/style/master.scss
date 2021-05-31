@@ -15,28 +15,67 @@
         background-image: url(../img/bg.png);
         background-size: cover;
         background-position: center;
+        justify-content: space-between;
+        @include not-md{
+            height: 100%;
+        }
+        .topWraper {
+            overflow: hidden;
+        }
         .header {
             min-height: 70px;
             background-color: #2e3b44;
             cursor: pointer;
         }
         .messageWrapper {
-            height: 100%;
-            border: 1px solid red;
+            overflow-y: auto;
             .msg {
                 min-height: 32px;
                 border-radius: 10px;
+                max-width: 80%;
+                min-width: 10%;
+                p {
+                    white-space: break-spaces;
+                    color: gainsboro;
+                }
             }
             .msg-me {
-                background-color: blue;
+                justify-content: flex-end;
+                // display: none !important;
+                .msg {
+                    background-color: rgb(41, 41, 46);
+                    padding-left: 30px;
+                }
             }
-            .msg-user {
-                background-color: rgb(113, 113, 230);
+            .msg-user .msg {
+                background-color: rgb(98, 98, 107);
             }
         }
         .inputMessage {
-            background-color: wheat;
-            min-height: 40px;
+            background-color: rgb(212, 212, 212);
+            min-height: 32px;
+            p {
+                overflow: auto;
+                max-height: 200px;
+                height: 100%;
+                width: 100%;
+                &:focus {
+                    outline: none;
+                }
+            }
+            button {
+                width: 60px;
+                height: 100%;
+                background-color: transparent;
+                border: none;
+                color: rgb(36, 78, 102);
+                font-weight: bold;
+                text-transform: capitalize;
+                &:disabled {
+                    font-weight: normal;
+                    color: gray;
+                }
+            }
         }
     }
 }
