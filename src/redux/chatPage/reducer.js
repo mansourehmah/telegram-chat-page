@@ -95,7 +95,7 @@ const chatPageReducer = (state = initialState, action) => {
             }
         }
         case ADD_MESSAGE: {
-            const time = new Date
+            const time = new Date()
             const newMessage = {
                 id: state.data.length + 1,
                 user: 'me',
