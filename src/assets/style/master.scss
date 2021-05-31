@@ -16,16 +16,29 @@
         background-size: cover;
         background-position: center;
         justify-content: space-between;
-        @include not-md{
+        @include not-md {
             height: 100%;
         }
         .topWraper {
             overflow: hidden;
         }
         .header {
-            min-height: 70px;
+            height: 70px;
             background-color: #2e3b44;
             cursor: pointer;
+            .picture {
+                width: 60px;
+                height: 60px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    clip-path: circle(50%);
+                }
+            }
+            h4{
+                color: white;
+            }
         }
         .messageWrapper {
             overflow-y: auto;

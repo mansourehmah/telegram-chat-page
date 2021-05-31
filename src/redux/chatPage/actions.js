@@ -1,9 +1,8 @@
 import { PROFILE_DETAILS, ADD_MESSAGE } from './types'
 
-export const profileDetails = (open) => {
+export const profileDetails = () => {
     return {
         type: PROFILE_DETAILS,
-        open
     }
 }
 export const addMessage = (newMsg) => {

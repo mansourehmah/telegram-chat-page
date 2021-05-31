@@ -1,4 +1,5 @@
 import { PROFILE_DETAILS, ADD_MESSAGE } from './types'
+import profilePic from '../../assets/img/profile.jpg'
 
 const initialState = {
     data: [
@@ -58,18 +59,28 @@ const initialState = {
             msg: 'Lorem ipsum dolor sit.'
         }
     ],
+    user: {
+        id: 353463,
+        name: 'sampleUser',
+        profilePic:
+            // 'url'
+            profilePic,
+        phoneNumber: '+989190000000',
+        username: '@sampleuser',
+        bio: 'its bio :)))'
+    },
     open: false,
 }
 
 
 const chatPageReducer = (state = initialState, action) => {
     switch (action.type) {
-        case PROFILE_DETAILS: {
-            return {
-                ...state,
-                open: !state.open
-            }
-        }
+        // case PROFILE_DETAILS: {
+        //     return {
+        //         ...state,
+        //         // open: !state.open
+        //     }
+        // }
         case ADD_MESSAGE: {
 
             const newMessage = {
