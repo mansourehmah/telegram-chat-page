@@ -93,6 +93,9 @@
             .profileDetails.open {
                 height: calc(90vh - 60px);
                 color: white;
+                @include not-md {
+                    height: calc(100vh - 60px);
+                }
                 h5 {
                     margin-top: 45px;
                     font-size: 16px;

@@ -8,7 +8,7 @@ function Back() {
 
     return (
         <div className="back" onClick={() => { dispatch(profileDetailsShow(false)) }}>
-            <button className="px-3 py-1">
+            <button className="pl-3 py-1">
                 <span className="px-1">back</span>
                 <FontAwesome name="chevron-right" />
             </button>
