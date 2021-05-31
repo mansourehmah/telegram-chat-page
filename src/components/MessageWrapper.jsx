@@ -1,11 +1,17 @@
+import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux'
 import Message from './Message';
 
 function MessageWrapper() {
     const message = useSelector(state => state.chatPage.data)
+    const msgWrapperRef = useRef()
 
+    useEffect(() => {
+        console.log(msgWrapperRef)
+        msgWrapperRef.current.scrollTop = msgWrapperRef.current.scrollHeight
+    })
     return (
-        <div className="messageWrapper p-0">
+        <div className="messageWrapper p-0" ref={msgWrapperRef}>
             <div className="messageBox py-2 px-1">
                 {message.map((message) => {
                     return (
