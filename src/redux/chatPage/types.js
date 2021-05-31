@@ -1,2 +1,8 @@
 export const PROFILE_DETAILS = 'PROFILE_DETAILS'
 export const ADD_MESSAGE = 'ADD_MESSAGE'
+export const FETCH_ERROR = "FETCH_ERROR"
+export const FETCH_SUCCESS = "FETCH_SUCCESS"
+export const FETCH_REQUEST = "FETCH_REQUEST"
+export const POST_ERROR = "POST_ERROR"
+export const POST_SUCCESS = "POST_SUCCESS"
+export const POST_REQUEST = "POST_REQUEST"
