@@ -65,9 +65,11 @@ const initialState = {
         profilePic:
             // 'url'
             profilePic,
-        phoneNumber: '+989190000000',
-        username: '@sampleuser',
-        bio: 'its bio :)))'
+        info: {
+            mobile: '+989190000000',
+            username: '@sampleuser',
+            bio: 'its bio :)))'
+        }
     },
     open: false,
 }

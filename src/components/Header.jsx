@@ -10,8 +10,8 @@ function Header(props) {
     const dispatch = useDispatch()
 
     return (
-        <div className={props.openDetails ? "open header d-flex align-items-center px-1" : " header d-flex align-items-center px-1 "} onClick={() => { dispatch(profileDetailsShow(true)) }}>
-            <div className={props.openDetails ? "d-flex align-items-center col-12 p-0" : "clickAble d-flex align-items-center col-12 p-0"}>
+        <div className=" header d-flex align-items-center p-0 " onClick={() => { dispatch(profileDetailsShow(true)) }}>
+            <div className={props.openDetails ? "open topHeader d-flex align-items-center col-12 px-0" : "topHeader clickAble d-flex align-items-center col-12 px-0"}>
                 <div className="picture p-2">
                     <img src={userInfo.profilePic} alt={userInfo.name} />
                 </div>
