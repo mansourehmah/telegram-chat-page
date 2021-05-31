@@ -1,6 +1,7 @@
-function ProfileDetails() {
+function ProfileDetails(props) {
+
     return (
-        <div className="profileDetails">
+        <div className={props.openDetails ? 'profileDetails open' : 'profileDetails'}>
         </div>
     );
 }

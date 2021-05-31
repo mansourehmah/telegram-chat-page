@@ -75,12 +75,12 @@ const initialState = {
 
 const chatPageReducer = (state = initialState, action) => {
     switch (action.type) {
-        // case PROFILE_DETAILS: {
-        //     return {
-        //         ...state,
-        //         // open: !state.open
-        //     }
-        // }
+        case PROFILE_DETAILS: {
+            return {
+                ...state,
+                open: action.open
+            }
+        }
         case ADD_MESSAGE: {
 
             const newMessage = {

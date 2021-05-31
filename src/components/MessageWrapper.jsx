@@ -7,11 +7,11 @@ function MessageWrapper() {
     const msgWrapperRef = useRef()
 
     useEffect(() => {
-        console.log(msgWrapperRef)
         msgWrapperRef.current.scrollTop = msgWrapperRef.current.scrollHeight
-    })
+    }, [message])
+
     return (
-        <div className="messageWrapper p-0" ref={msgWrapperRef}>
+        <div className='messageWrapper p-0' ref={msgWrapperRef}>
             <div className="messageBox py-2 px-1">
                 {message.map((message) => {
                     return (
